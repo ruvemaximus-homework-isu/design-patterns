@@ -9,20 +9,15 @@ class SettingsTestCase(unittest.TestCase):
     """
 
     def test_settings_manager_open(self):
-        """
-        Проверить открытие и загрузку настроек
-        """
+        """Проверить открытие и загрузку настроек"""
 
         manager = SettingsManager()
-
         result = manager.open("../settings.json")
-
         assert result is True
 
     def test_settings_manager_singletone(self):
-        """
-        Проверить работу шаблона singletone
-        """
+        """Проверить работу шаблона singletone"""
+
         manager1 = SettingsManager()
         manager1.open("../settings.json")
 
