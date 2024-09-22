@@ -71,7 +71,7 @@ class SettingsManager(metaclass=Singleton):
             inn="380080920202",
             account="DEFAULT",
             organization_name="Рога и копыта (default)",
-            bik="DEFAULT",
-            correspondent_account="DEFAULT",
-            type_of_property="12345",
+            bik="0" * 9,
+            correspondent_account="0" * 9,
+            ownership_type="12345",
         )
