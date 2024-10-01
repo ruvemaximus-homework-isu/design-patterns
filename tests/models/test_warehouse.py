@@ -1,9 +1,8 @@
-import unittest
+import pytest
 
 from src.models.warehouse import Warehouse
 
 
-class WarehouseTestCase(unittest.TestCase):
-    def test_warehouse(self):
-        item = Warehouse(name="test")
-        assert item.name == "test"
+def test_warehouse():
+    item = Warehouse(name="test")
+    assert item.name == "test"

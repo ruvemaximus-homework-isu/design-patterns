@@ -9,8 +9,7 @@ class BaseReference(BaseModel):
     uniq_code: str = Field(default_factory=lambda: str(uuid.uuid4()), frozen=True)
     name: str = Field(max_length=50, default="")
 
-    class Config:
-        validate_assignment = True
+    model_config = {"validate_assignment": True}
 
     def set_compare_mode(self, other) -> bool:
         if other is None:

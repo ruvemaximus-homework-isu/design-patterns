@@ -13,8 +13,7 @@ class Settings(BaseModel):
     correspondent_account: str = Field(max_length=11, description="Корреспондентский счёт")
     ownership_type: str = Field(max_length=5, description="Вид собственности")
 
-    class Config:
-        validate_assignment = True
+    model_config = {"validate_assignment": True}
 
     def __eq__(self, other: "Settings"):
         return (
