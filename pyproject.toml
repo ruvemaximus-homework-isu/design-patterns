@@ -20,7 +20,11 @@ extend-exclude = ["**/migrations/*.py", "**/*.js", "**/*.css", "templates/"]
 
 
 [tool.ruff.lint]
-extend-select = ["I"]  # сортировка имбортов
+extend-select = [
+    "I",   # isort
+    "SIM", # flake8-simplify
+    "RET", # flake8-return
+]
 
 
 [build-system]

@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
-      - run: pip install pydantic
-      - run: python -m unittest discover ./tests/
+      - run: pip install pydantic pytest
+      - run: pytest
